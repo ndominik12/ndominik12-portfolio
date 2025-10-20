@@ -1,13 +1,48 @@
+---
+import "../styles/global.css";
+---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Nagy Dominik Portfolio</title>
-	</head>
-	<body class="flex flex-col min-h-screen w-full justify-center items-center">
-		<slot />
-	</body>
+<html lang="en" class="bg-gradient-to-b from-slate-950 to-blue-900 text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Dominik Nagy | Portfolio</title>
+  </head>
+
+  <body class="min-h-screen flex flex-col font-sans">
+    <!-- Navbar -->
+    <header class="border-b border-blue-700 py-4 bg-black/40 backdrop-blur-md">
+      <nav
+        class="container mx-auto flex justify-between items-center px-6"
+      >
+        <h1 class="text-xl font-semibold text-blue-400">Dominik Nagy</h1>
+        <ul class="flex gap-6 text-sm font-medium text-gray-300">
+          <li><a href="#" class="hover:text-blue-400">Home</a></li>
+          <li>
+            <a href="https://ndominik12.cc/" class="hover:text-blue-400">
+              Projects
+            </a>
+          </li>
+          <li><a href="/contact.html" class="hover:text-blue-400">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Page content -->
+    <main class="flex-grow flex items-center justify-center">
+      <slot />
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 text-center text-sm text-gray-400 border-t border-blue-800"
+    >
+      <p>
+        © {new Date().getFullYear()} Dominik Nagy | Ndominik12 | All rights reserved.
+      </p>
+    </footer>
+  </body>
 </html>
