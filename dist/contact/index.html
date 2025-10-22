@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-gradient-to-b from-slate-950 to-blue-900 text-white">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Dominik Nagy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body class="min-h-screen flex flex-col font-sans">
+    <!-- Navigation -->
+    <header class="border-b border-blue-700 py-4 bg-black/40 backdrop-blur-md">
+      <nav class="container mx-auto flex justify-between items-center px-6">
+        <h1 class="text-xl font-semibold text-blue-400">
+          <a href="/">Dominik Nagy</a>
+        </h1>
+        <ul class="flex gap-6 text-sm font-medium text-gray-300">
+          <li><a href="/" class="hover:text-blue-400">Home</a></li>
+          <li>
+            <a href="https://ndominik12.cc/" class="hover:text-blue-400"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a href="/contact.html" class="text-blue-400 font-semibold"
+              >Contact</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Contact content -->
+    <main
+      class="flex-grow flex flex-col items-center justify-center text-center px-6"
+    >
+      <h1 class="text-5xl font-extrabold text-blue-400 mb-6">Get in Touch</h1>
+      <p class="max-w-xl text-gray-300 text-lg mb-10">
+        I’d love to hear from you! Whether you want to chat about a project,
+        ask a question, or just say hi — feel free to reach out.
+      </p>
+
+      <div class="space-y-4">
+        <a
+          href="mailto:ndomi560@gmail.com"
+          class="block bg-blue-600 hover:bg-blue-500 transition w-fit mx-auto px-8 py-3 rounded-lg font-medium shadow-lg shadow-blue-900/40"
+        >
+          ✉️ Send me an email — <span class="text-sm">ndomi560@gmail.com</span>
+        </a>
+
+        <a
+          href="https://github.com/ndominik12"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block border border-blue-600 hover:bg-blue-800 transition w-fit mx-auto px-8 py-3 rounded-lg font-medium"
+        >
+          💻 Visit my GitHub — <span class="text-sm">github.com/ndominik12</span>
+        </a>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer
+      class="py-6 text-center text-sm text-gray-400 border-t border-blue-800 mt-20"
+    >
+      © <span id="year"></span> Dominik Nagy | NdominIk12 — All rights reserved.
+    </footer>
+
+    <script>
+      // automatically update year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
